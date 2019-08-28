@@ -123,11 +123,8 @@ while(<$in_data>){
     if($state eq "IDLE"){
         if($_ =~ /endmodule/){
             $state = "DONE";
+            break;
         }
-    }
-
-    if($state eq "DONE"){
-        break;
     }
 
 }
